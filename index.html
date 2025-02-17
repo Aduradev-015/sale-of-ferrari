@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="full">
+    <h1 class="cars">FERRARI CARS</h1>
+    <div class="container">
+        <form id="signupForm" class="form">
+        <h1>Sign Up</h1>
+        <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+            <label for="userName">Username</label>
+            <input type="text" id="name" placeholder="Enter Your Username" required>
+      </div>
+      <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="signin.html">Sign In</a></p>
+    </form>
+  </div>
+   </div>
+    
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const email = document.getElementById('email').value;
+      const username = document.getElementById('name').value; // Get username
+      const password = document.getElementById('password').value;
+
+      // Store the username, email, and password in localStorage
+      localStorage.setItem('userEmail', email);
+      localStorage.setItem('userName', username); // Store username
+      localStorage.setItem('userPassword', password);
+
+      window.location.href = './index2.html';
+    });
+  </script>
+</body>
+</html>
+

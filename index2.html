@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="full">
+        <h1 class="cars">FERRARI CARS</h1>
+  <div class="container">
+    <form id="signinForm" class="form">
+      <h1>Sign In</h1>
+      <div class="input-group">
+        <label for="signinEmail">Email</label>
+        <input type="email" id="signinEmail" placeholder="Enter your email" required>
+      </div>
+      <div class="input-group">
+        <label for="signinPassword">Password</label>
+        <input type="password" id="signinPassword" placeholder="Enter your password" required>
+      </div>
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      <div id="error-message" class="error-message"></div>
+    </form>
+  </div>
+    </div>
+
+  <script>
+    document.getElementById('signinForm').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      const emailInput = document.getElementById('signinEmail').value;
+      const passwordInput = document.getElementById('signinPassword').value;
+      const storedEmail = localStorage.getItem('userEmail');
+      const storedPassword = localStorage.getItem('userPassword');
+      const storedUserName = localStorage.getItem('userName'); // Get stored username
+      const errorMessageDiv = document.getElementById('error-message');
+
+      // Check if the entered email and password match the stored ones
+      if (emailInput === storedEmail && passwordInput === storedPassword) {
+        // Store the username for use on the landing page
+        localStorage.setItem('userName', storedUserName); // Store username in session
+        // Redirect to the landing page
+        window.location.href = './index3.html';
+      } else {
+        // Show error message if credentials are incorrect
+        errorMessageDiv.textContent = 'Invalid email or password. Please try again.';
+        errorMessageDiv.style.color = 'red';
+      }
+    });
+  </script>
+</body>
+</html>

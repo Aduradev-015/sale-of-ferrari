@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="full">
+        <div class="user">
+            <h1 style="background-color: white; position: absolute; top: 20px; color: blueviolet; padding: 20px; border-radius: 50px; font-family: cursive;" id="welcome-message"></h1> <!-- User's name will appear here -->
+        </div>
+      <div class="container">
+        <h1>Welcome to FERRARI CARS !</h1>
+        <p>You have successfully signed in!</p>
+        <p>EXPLORE FOR YOUR FAVORITE CAR</p>
+      </div>
+    
+    </div>
+  <div class="sec2">
+    <div class="grid">
+        <div class="items">
+            <img src="../IMAGES/bangkok-thailand-08082022-lamborghini-luxury-super-car-fast-sports-premium-lighting-background-3d-illustration_67 (3).jpg" alt="">
+            <p class="rice">price: <span>$150 Million </span></p>
+            <button class="ton">
+                Add to cart
+            </button>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+        <div class="items">
+            <img src="" alt="">
+            <p></p>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    // Get the user's name from localStorage and display it
+    const userName = localStorage.getItem('userName');
+    const welcomeMessage = document.getElementById('welcome-message');
+    if (userName) {
+      welcomeMessage.textContent = `Hello, ${userName}!`;
+    } else {
+      welcomeMessage.textContent = "Hello, Guest!";
+    }
+  </script>
+</body>
+</html>
+

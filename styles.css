@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .full {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../IMAGES/bangkok-thailand-08082022-lamborghini-luxury-super-car-fast-sports-premium-lighting-background-3d-illustration_67\ \(3\).jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .cars{
+    margin-right: 30px;
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: 900;
+    }
+  .container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 30px 4px 10px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  .form h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .error-message {
+    margin-top: 1rem;
+    text-align: center;
+    color: red;
+    font-size: 0.9rem;
+  }
+  .sec2{
+    border: medium solid red;
+    height: 100vh;
+  }
+  .rice{
+    border-radius: 10px;
+    width: 50%;
+    height: 50px;
+    font-size: 30px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+  }
+  .ton:hover{
+    background-color: rgba(255, 0, 0, 0.397)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623);
+  }
+  .items{
+    
+    }
+    .ton{
+        width: 50%;
+        border-radius: 10px;
+    }
+  
+  @media (max-width: 600px) {
+    .container {
+      width: 90%;
+    }
+  }
+  
