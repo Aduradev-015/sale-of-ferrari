@@ -103,15 +103,12 @@
   </div> -->
 
   <script>
-    // Get the user's name from localStorage and display it
-    const userName = localStorage.getItem('userName');
+    // Get the logged-in user's name from localStorage and display it
+    const userName = localStorage.getItem('loggedInUser');
     const welcomeMessage = document.getElementById('welcome-message');
-    if (userName) {
-      welcomeMessage.textContent = `Hello, ${userName}!`;
-    } else {
-      welcomeMessage.textContent = "Hello, Guest!";
-    }
+    welcomeMessage.textContent = userName ? `Hello, ${userName}!` : "Hello, Guest!";
   </script>
+  
 </body>
 </html>
 

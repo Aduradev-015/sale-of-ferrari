@@ -31,22 +31,35 @@
    </div>
     
 
-  <script>
+   <script>
     document.getElementById('signupForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-
+      event.preventDefault();
+  
       const email = document.getElementById('email').value;
-      const username = document.getElementById('name').value; // Get username
+      const username = document.getElementById('name').value;
       const password = document.getElementById('password').value;
-
-      // Store the username, email, and password in localStorage
-      localStorage.setItem('userEmail', email);
-      localStorage.setItem('userName', username); // Store username
-      localStorage.setItem('userPassword', password);
-
-      window.location.href = './index2.html';
+  
+      // Retrieve existing users from localStorage or create an empty array
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+  
+      // Check if the user already exists
+      const existingUser = users.find(user => user.email === email);
+      if (existingUser) {
+        alert("User already exists! Please sign in.");
+        return;
+      }
+  
+      // Add the new user
+      users.push({ email, username, password });
+  
+      // Save back to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+  
+      alert("Sign-up successful! You can now sign in.");
+      window.location.href = './index2.html'; // Redirect to sign-in page
     });
   </script>
+  
 </body>
 </html>
 

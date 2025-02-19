@@ -27,29 +27,30 @@
   </div>
     </div>
 
-  <script>
-    document.getElementById('signinForm').addEventListener('submit', function(event) {
-      event.preventDefault(); 
-
-      const emailInput = document.getElementById('signinEmail').value;
-      const passwordInput = document.getElementById('signinPassword').value;
-      const storedEmail = localStorage.getItem('userEmail');
-      const storedPassword = localStorage.getItem('userPassword');
-      const storedUserName = localStorage.getItem('userName'); // Get stored username
-      const errorMessageDiv = document.getElementById('error-message');
-
-      // Check if the entered email and password match the stored ones
-      if (emailInput === storedEmail && passwordInput === storedPassword) {
-        // Store the username for use on the landing page
-        localStorage.setItem('userName', storedUserName); // Store username in session
-        // Redirect to the landing page
-        window.location.href = './index3.html';
-      } else {
-        // Show error message if credentials are incorrect
-        errorMessageDiv.textContent = 'Invalid email or password. Please try again.';
-        errorMessageDiv.style.color = 'red';
-      }
-    });
-  </script>
+    <script>
+      document.getElementById('signinForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const emailInput = document.getElementById('signinEmail').value;
+        const passwordInput = document.getElementById('signinPassword').value;
+        const errorMessageDiv = document.getElementById('error-message');
+    
+        // Retrieve users from localStorage
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+    
+        // Find matching user
+        const validUser = users.find(user => user.email === emailInput && user.password === passwordInput);
+    
+        if (validUser) {
+          // Store the logged-in user's username
+          localStorage.setItem('loggedInUser', validUser.username);
+          window.location.href = './index3.html'; // Redirect to the landing page
+        } else {
+          errorMessageDiv.textContent = 'Invalid email or password. Please try again.';
+          errorMessageDiv.style.color = 'red';
+        }
+      });
+    </script>
+    
 </body>
 </html>
