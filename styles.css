@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
   }
   
   .full {
@@ -14,6 +15,7 @@
     background-image: url("./images/abstract-canvas-neon-light-car-automobile-artwork-design-digital-art_717440-3854.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
   }
   
   .cars{
@@ -109,9 +111,7 @@
   .ton:hover{
     background-color: rgba(255, 0, 0, 0.397)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623)a(255, 0, 0, 0.623);
   }
-  .items{
-    
-    }
+
     .ton{
         width: 50%;
         border-radius: 10px;
@@ -119,7 +119,60 @@
   
   @media (max-width: 600px) {
     .container {
+      width: 50%;
+      display: block;
+      margin-inline: auto;
+
+    }
+    .full{
+      display: block;
+    }
+    h2{
+      position: absolute;
+      top: 0;
+      left: 50px;
+    }
+    a{
+      font-size: 10px;
+    }
+  }
+  @media screen and (max-width:500px){
+    .container{
       width: 90%;
     }
   }
+  @media screen and (max-width:601px) {
+    #cont{
+      margin-inline: auto;
+      position: absolute;
+      left: 90px;
+      top: 150px;
+    }
+    .user{
+      position: absolute;
+      left: 130px;
+      width: 50%;
+    }
+  }
+  @media screen and (max-width:502px) {
+    #cont{
+      margin-inline: auto;
+      position: absolute;
+      left: 90px;
+      top: 150px;
+    }
+    .user{
+      position: absolute;
+      left: 130px;
+      width: 50%;
+    }
+  }
+  @media screen and (max-width:300px){
+    #cont{
+      width: 100%;
+      position: relative;
+      top: 200px;
+    }
+  }
+
   
